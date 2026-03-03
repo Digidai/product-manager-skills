@@ -1,6 +1,6 @@
 ---
 name: product-manager
-description: Senior PM agent — routes intent to frameworks, loads domain knowledge on demand, delivers structured artifacts.
+description: Senior PM agent for PRD, user stories, roadmaps, positioning, SaaS metrics, discovery interviews, prioritization, career coaching, and AI product strategy.
 type: workflow
 ---
 
