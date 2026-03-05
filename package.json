@@ -1,7 +1,7 @@
 {
   "name": "product-manager-skills",
-  "version": "0.2.0",
-  "description": "Senior PM agent with 6 knowledge domains, 10 templates, and 30+ frameworks. Discovery, strategy, delivery, 32 SaaS metrics with formulas, PM career coaching (IC to CPO), and AI product craft. Opinionated, evidence-driven, bias-to-action.",
+  "version": "0.2.1",
+  "description": "Senior PM agent with 6 knowledge domains, 12 templates, and 30+ frameworks. Discovery, strategy, delivery, 32 SaaS metrics with formulas, PM career coaching (IC to CPO), and AI product craft. Opinionated, evidence-driven, bias-to-action.",
   "keywords": [
     "openclaw-skill",
     "agent-skill",

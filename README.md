@@ -1,6 +1,6 @@
 # Product Manager Skills
 
-**Not a template pack -- a PM brain.** One install gives you 6 knowledge domains, 30+ frameworks, 10 templates, and an agent that pushes back when your thinking is sloppy.
+**Not a template pack -- a PM brain.** One install gives you 6 knowledge domains, 30+ frameworks, 12 templates, and an agent that pushes back when your thinking is sloppy.
 
 [![Version](https://img.shields.io/badge/version-0.2.0-blue)](https://clawhub.ai/Digidai/product-manager-skills)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-green)](LICENSE)
@@ -132,7 +132,7 @@ Ask: *"Analyze these metrics: MRR $50k, churn 8%, CAC $500, LTV $3,000"* and get
 
 ---
 
-## 10 Templates
+## 12 Templates
 
 | Template | Use When |
 |----------|----------|
@@ -146,6 +146,8 @@ Ask: *"Analyze these metrics: MRR $50k, churn 8%, CAC $500, LTV $3,000"* and get
 | Opportunity Solution Tree | Mapping outcomes to opportunities to solutions |
 | Roadmap Plan | Building Now/Next/Later roadmaps |
 | Business Health Scorecard | Diagnosing SaaS business health |
+| Competitive Analysis | Analyzing competitors and market position |
+| Lean UX Canvas | Structuring hypotheses and experiments |
 
 ---
 
@@ -214,15 +216,16 @@ knowledge/                       # 6 domain modules, loaded on demand
   finance-metrics.md             #   14.2 KB -- 32 SaaS metrics with formulas
   career-leadership.md           #   15.5 KB -- PM to Director to VP to CPO
   ai-product-craft.md            #   13.5 KB -- context engineering, agent patterns
-templates/                       # 10 output templates
+templates/                       # 12 output templates
   prd.md, user-story.md, problem-statement.md,
   positioning-statement.md, epic-hypothesis.md,
   press-release.md, discovery-interview-plan.md,
   opportunity-solution-tree.md, roadmap-plan.md,
   business-health-scorecard.md
+  competitive-analysis.md, lean-ux-canvas.md
 ```
 
-18 files. ~2,200 lines. ~130 KB. Everything a PM agent needs, nothing it doesn't.
+20 files. ~2,200 lines. ~130 KB. Everything a PM agent needs, nothing it doesn't.
 
 ---
 
