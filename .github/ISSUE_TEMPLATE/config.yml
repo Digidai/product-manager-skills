@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Start a discussion
+    url: https://github.com/Digidai/product-manager-skills/discussions
+    about: Use Discussions for framework requests, examples, and open-ended product feedback.

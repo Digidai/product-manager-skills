@@ -1,261 +1,210 @@
 # Product Manager Skills
 
-**Not a template pack -- a PM brain.** One install gives you 6 knowledge domains, 30+ frameworks, 12 templates, and an agent that pushes back when your thinking is sloppy.
+**Not a template pack. A PM operator for AI coding tools.**
 
-[![Version](https://img.shields.io/badge/version-0.2.1-blue)](https://clawhub.ai/Digidai/product-manager-skills)
+Turn Claude Code, Codex, Cursor, or Windsurf into a product manager that can critique PRDs, diagnose SaaS metrics, plan roadmaps, run discovery, and coach career moves.
+
+[![Release](https://img.shields.io/github/v/release/Digidai/product-manager-skills)](https://github.com/Digidai/product-manager-skills/releases)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-green)](LICENSE)
-[![Security](https://img.shields.io/badge/security-zero%20scripts%2C%20pure%20markdown-brightgreen)]()
-[![Works With](https://img.shields.io/badge/works%20with-Claude%20Code%20%7C%20Cursor%20%7C%20Windsurf%20%7C%20Codex-purple)]()
+[![Security](https://img.shields.io/badge/security-zero%20scripts%2C%20pure%20markdown-brightgreen)](https://github.com/Digidai/product-manager-skills)
+[![Works With](https://img.shields.io/badge/works%20with-Claude%20Code%20%7C%20Codex%20%7C%20Cursor%20%7C%20Windsurf-blue)](#install-in-60-seconds)
 
-> Zero scripts. Zero dependencies. Zero network calls. Pure Markdown knowledge -- inspect every line before you install.
+> Zero scripts. Zero dependencies. Zero network calls. Pure Markdown knowledge you can inspect line by line before you install.
 
----
+## Why People Reuse It
 
-## Quick Start
+Most AI PM tooling is good at writing polished nonsense. This skill is designed for repeat workflows where rigor matters:
 
-```bash
-clawhub install product-manager-skills
-```
+- Turn vague feature requests into problem framing, measurable outcomes, and a usable PRD.
+- Diagnose SaaS health from raw metrics instead of getting generic advice like "improve retention."
+- Pressure-test prioritization, roadmaps, and strategy with explicit tradeoffs.
+- Coach PM to Director to VP transitions with concrete gaps and action plans.
 
-Then try:
+## Start With These 3 Workflows
 
-```
-"Help me write a PRD for a notification preferences feature"
+| Workflow | Prompt | Example |
+|---|---|---|
+| **SaaS health diagnostic** | "Analyze these metrics: MRR $50k, 500 customers, gross margin 80%, monthly churn 8%, CAC $500." | [SaaS diagnostic demo](examples/saas-health-diagnostic.md) |
+| **PRD pushback and review** | "Review this PRD draft like a strong PM peer. Flag bad framing, missing metrics, solution smuggling, and delivery risk." | [PRD review demo](examples/prd-review.md) |
+| **Director readiness coaching** | "I'm a senior PM interviewing for Director roles in 90 days. Diagnose my gaps and coach me." | [Director coaching demo](examples/director-coaching.md) |
 
-"My SaaS has MRR $50k, monthly churn 8%, CAC $500. Diagnose my business health."
+More prompts: [STARTER-PROMPTS.md](STARTER-PROMPTS.md)  
+中文说明: [README.zh-CN.md](README.zh-CN.md)
 
-"I'm a senior PM preparing for Director interviews. Coach me."
-```
-
----
-
-## What It Does
-
-| Domain | What You Get | Key Frameworks |
-|--------|-------------|----------------|
-| **Discovery & Research** | Validate problems, run interviews, map opportunities | JTBD, Mom Test, Opportunity Solution Tree, Lean UX Canvas, PoL Probes |
-| **Strategy & Positioning** | Position products, size markets, plan roadmaps | Geoffrey Moore, PESTEL, TAM/SAM/SOM, RICE/Kano/ICE, Roadmap Planning |
-| **Artifacts & Delivery** | Write PRDs, user stories, epics, press releases | Cohn + Gherkin, 8 Story Splitting Patterns, 9 Epic Breakdown Patterns, PRFAQ |
-| **Finance & Metrics** | Calculate and diagnose 32 SaaS metrics | MRR/ARR/NRR, CAC/LTV, Rule of 40, Magic Number, Payback Period, Channel ROI |
-| **Career & Leadership** | Navigate PM to Director to VP to CPO transitions | Altitude-Horizon Framework, Three Ps Framework, 30-60-90 Executive Onboarding |
-| **AI Product Craft** | Build AI-native products with rigor | AI-Shaped Readiness, Context Engineering, Agent Orchestration, AI Validation |
-
----
-
-## Why This, Not Generic AI?
-
-| | Generic ChatGPT | This Skill |
-|--|----------------|------------|
-| Ask for a PRD | Template filled with platitudes | Loads PRD framework, applies quality gates, labels `[assumption]`, flags Solution Smuggling |
-| Ask about churn | "Reduce churn by improving UX" | `Annual Churn = 1 - (1 - Monthly)^12`. Your 8% monthly = 63% annual. Red flag. |
-| Ask for career advice | Generic "develop leadership skills" | Diagnoses Hero Syndrome, runs Altitude-Horizon assessment, gives transition-specific action plan |
-| Interaction style | Answers everything, never pushes back | Challenges bad framing, demands measurable outcomes, names tradeoffs |
-
----
-
-## The 32 SaaS Metrics
-
-Every metric includes the exact formula, stage-specific benchmarks (early/growth/scale), and red flag severity.
-
-**Revenue & Growth:** MRR, ARR, MoM Growth, Net New MRR, Expansion MRR, Contraction MRR, Quick Ratio
-
-**Unit Economics:** CAC, LTV, LTV:CAC Ratio, Payback Period, Gross Margin, Blended CAC
-
-**Retention & Expansion:** Logo Churn, Revenue Churn, Net Revenue Retention (NRR), Gross Revenue Retention, Expansion Rate
-
-**Efficiency:** Rule of 40, Burn Multiple, Magic Number, CAC Payback, Sales Efficiency
-
-**Engagement:** DAU/MAU, Activation Rate, Time-to-Value, Feature Adoption, NPS/CSAT
-
-Ask: *"Analyze these metrics: MRR $50k, churn 8%, CAC $500, LTV $3,000"* and get a full diagnostic with severity ratings and recommended actions.
-
----
-
-## Framework Inventory (30+)
-
-<details>
-<summary>Click to expand full list</summary>
-
-### Discovery & Research
-- Problem Framing Canvas (MITRE)
-- JTBD Framework (Jobs to Be Done)
-- Customer Journey Mapping
-- Opportunity Solution Tree (Teresa Torres)
-- Lean UX Canvas
-- PoL Probe Advisor (5 probe types)
-- Discovery Interview Prep (Mom Test-inspired)
-- Problem Statement Framework
-
-### Strategy & Positioning
-- Geoffrey Moore Positioning Statement
-- Positioning Workshop Flow
-- Strategy Session (multi-phase)
-- Company Research Framework
-- PESTEL Analysis
-- Prioritization Framework Selection (RICE, ICE, Kano, Weighted Scoring, Cost of Delay, Impact Mapping)
-- Roadmap Planning (Now/Next/Later)
-- TAM/SAM/SOM Market Sizing
-
-### Artifacts & Delivery
-- PRD Development (structured, not template-fill)
-- User Story (Cohn + Gherkin acceptance criteria)
-- 8 Story Splitting Patterns
-- User Story Mapping (Jeff Patton)
-- Epic Hypothesis Statement
-- 9 Epic Breakdown Patterns
-- Proto-Persona
-- Press Release / PRFAQ (Working Backwards)
-- Storyboards
-- Recommendation Canvas
-- End-of-Life Communication
-
-### Finance & Metrics
-- SaaS Revenue & Growth Metrics (32 metrics)
-- Business Health Diagnostic
-- Feature Investment Analysis (ROI)
-- Channel Economics
-- Pricing Analysis
-- Unit Economics & Efficiency
-
-### Career & Leadership
-- Altitude-Horizon Framework (PM to Director)
-- Three Ps Framework (Director to VP/CPO)
-- Executive Onboarding 30-60-90
-- Readiness Diagnostic Coaching
-
-### AI Product Craft
-- AI-Shaped Readiness Assessment
-- Context Engineering Diagnostic
-- Agent Orchestration Patterns
-- AI Validation (PoL Probes for AI)
-
-</details>
-
----
-
-## 12 Templates
-
-| Template | Use When |
-|----------|----------|
-| PRD | Writing product requirements documents |
-| User Story | Creating stories with Gherkin acceptance criteria |
-| Problem Statement | Framing a user problem empathetically |
-| Positioning Statement | Defining product market position |
-| Epic Hypothesis | Framing epics as testable hypotheses |
-| Press Release | Working Backwards / PRFAQ |
-| Discovery Interview Plan | Preparing for customer interviews |
-| Opportunity Solution Tree | Mapping outcomes to opportunities to solutions |
-| Roadmap Plan | Building Now/Next/Later roadmaps |
-| Business Health Scorecard | Diagnosing SaaS business health |
-| Competitive Analysis | Analyzing competitors and market position |
-| Lean UX Canvas | Structuring hypotheses and experiments |
-
----
-
-## How It Works
-
-1. **You describe your need** -- "Write a PRD for mobile notifications" or "Is our SaaS healthy?"
-2. **The agent routes to the right framework** -- via 40+ intent-to-framework mappings
-3. **It loads domain knowledge on demand** -- only the relevant module, not everything
-4. **It picks the interaction mode** -- guided Q&A, context dump, or best guess (you choose)
-5. **It delivers structured output** -- with decisions made, assumptions labeled, and next steps
-6. **Quality gates check every output** -- universal gates + domain-specific gates
-
-No browsing, no selecting, no manual loading. Just ask.
-
----
-
-## Three Interaction Modes
-
-| Mode | How It Works | Best For |
-|------|-------------|----------|
-| **Guided** | One question at a time with progress labels (Q1/6, Q2/6) | Discovery, diagnostics, strategy sessions |
-| **Context Dump** | Paste everything; agent fills gaps and delivers | When you have context ready |
-| **Best Guess** | Agent infers missing details, labels every `[assumption]` | "Just do it" moments |
-
----
-
-## Anti-Pattern Detection
-
-The agent actively flags bad PM practice:
-
-- **Solution Smuggling** -- "We need a dashboard" (problem statement that embeds a solution)
-- **Metrics Theater** -- tracking metrics that look good but drive no decisions
-- **Feature Factory** -- shipping features without validating the problem
-- **HiPPO Prioritization** -- roadmap shaped by the Highest Paid Person's Opinion
-- **Confirmation Bias** -- discovery questions designed to confirm existing beliefs
-- **Premature Scaling** -- optimizing growth before unit economics work
-- **Horizontal Slicing** -- splitting work by architecture layer instead of user value
-
-...and 40+ more across all domains.
-
----
-
-## Install Options
+## Install In 60 Seconds
 
 ### Claude Code / OpenClaw
+
 ```bash
 clawhub install product-manager-skills
 ```
 
-### Cursor / Windsurf / Codex / Any AI Coding Tool
+### Codex / Cursor / Windsurf / GitHub-based skill loaders
+
 ```bash
 npx skills add Digidai/product-manager-skills
 ```
 
-### Claude Projects
-Upload `SKILL.md` plus the `knowledge/` and `templates/` folders to your project knowledge.
+Then paste one of these:
 
-### Any LLM
-Point your system prompt at `SKILL.md`. It loads knowledge modules and templates on demand via relative paths.
+```text
+Help me write a PRD for a notification preferences feature. Make reasonable assumptions and label them.
 
-Point your system prompt at `SKILL.md`. It loads knowledge modules and templates on demand via relative paths.
+Analyze these metrics: MRR $50k, 500 customers, gross margin 80%, monthly churn 8%, CAC $500.
 
----
+Review my roadmap and tell me where stakeholder requests are outweighing evidence.
+```
+
+## What Good Output Looks Like
+
+### 1. SaaS Diagnostic
+
+Input:
+
+```text
+Analyze these metrics: MRR $50k, 500 customers, gross margin 80%, monthly churn 8%, CAC $500.
+```
+
+Expected behavior:
+
+```text
+- 8% monthly churn compounds to roughly 63% annual churn. This is a red flag, not a "slightly high" metric.
+- ARPA is about $100/month. With 80% gross margin and 8% monthly churn, better LTV is about $1,000.
+- LTV:CAC is about 2:1. Payback is about 6.25 months.
+- Diagnosis: payback is workable, retention is not. Do not scale acquisition until churn is understood cohort by cohort.
+```
+
+Full example: [examples/saas-health-diagnostic.md](examples/saas-health-diagnostic.md)
+
+### 2. PRD Review
+
+Input:
+
+```text
+Review this PRD for a notification preferences center. Flag solution smuggling, weak metrics, overscoping, and delivery risk.
+```
+
+Expected behavior:
+
+```text
+- Your problem statement is solution-smuggled: "users need a preferences dashboard."
+- Success metrics have no baseline, target, or guardrail.
+- Scope mixes channels, digests, quiet hours, admin rules, and migration. This is multiple releases.
+- Recommend a thinner first slice: email opt-out + account-level preferences + measurable reduction in unsubscribe-driven churn.
+```
+
+Full example: [examples/prd-review.md](examples/prd-review.md)
+
+### 3. Career Coaching
+
+Input:
+
+```text
+I'm a senior PM managing two PMs, strong on execution, weak on org influence, and interviewing for Director roles in 3 months. Coach me.
+```
+
+Expected behavior:
+
+```text
+- Diagnosis: strong team altitude, weak org altitude.
+- Gap: you describe execution wins well but not portfolio tradeoffs or cross-functional influence.
+- Plan: collect 3 stories that show org-level impact, build a weekly visibility loop, and practice decision framing with tradeoffs.
+```
+
+Full example: [examples/director-coaching.md](examples/director-coaching.md)
+
+## What You Get
+
+| Domain | What It Helps With | Example Frameworks |
+|---|---|---|
+| **Discovery & Research** | Validate problems, prep interviews, map journeys, structure experiments | JTBD, Mom Test, Opportunity Solution Tree, Lean UX Canvas, PoL Probes |
+| **Strategy & Positioning** | Position products, prioritize work, size markets, build roadmaps | Geoffrey Moore, PESTEL, TAM/SAM/SOM, RICE, ICE, Kano |
+| **Artifacts & Delivery** | Write and critique PRDs, user stories, epics, PRFAQs, recommendation docs | Cohn + Gherkin, Story Mapping, Epic Breakdown, PRFAQ |
+| **Finance & Metrics** | Calculate 32 SaaS metrics and diagnose business health | MRR, ARR, NRR, CAC, LTV, Rule of 40, Magic Number |
+| **Career & Leadership** | Coach PM to Director to VP transitions | Altitude-Horizon, Three Ps, 30-60-90 onboarding |
+| **AI Product Craft** | Pressure-test AI-native product decisions | AI-Shaped Readiness, Context Engineering, Agent Orchestration |
+
+## Why It Performs Better Than Generic Prompting
+
+| Generic prompting | This skill |
+|---|---|
+| Writes plausible PM text | Applies PM frameworks and quality gates |
+| Accepts bad framing | Pushes back on Solution Smuggling, Metrics Theater, Feature Factory, and more |
+| Gives generic churn advice | Calculates churn, LTV, payback, and names the real bottleneck |
+| Asks you to repeat PM context every session | Carries a reusable PM workflow and routing system |
+| Optimizes for politeness | Optimizes for decisions, tradeoffs, and next steps |
+
+## Who It Is For
+
+- Technical PMs, founders, and product leads who already work inside AI coding tools.
+- Teams that want a reusable PM brain without sending product context to another SaaS.
+- People who value pushback, assumptions, and explicit tradeoffs over nice-sounding output.
+
+## Who It Is Not For
+
+- Teams looking for a collaborative web app with approvals, comments, and sharing workflows.
+- Users who only want passive template filling and never want the AI to challenge the framing.
+- Non-technical buyers who prefer turnkey SaaS onboarding over local or repo-based installation.
+
+## Interaction Style
+
+This skill is optimized for a fast first useful draft:
+
+- If the request is clear enough, it answers immediately and labels assumptions inline.
+- If context is partial, it gives the best draft first and only asks the minimum follow-up questions needed.
+- If the task is genuinely exploratory, it can switch into guided mode one question at a time.
+- Every answer is expected to end with decisions made, assumptions to validate, and a recommended next step.
+
+## Built For Repeat Usage
+
+Most PM work is recurring. This skill is strongest when you reuse it weekly:
+
+- Monday: review roadmap changes and prioritization requests.
+- Mid-week: critique PRDs, epics, and user stories before sharing with engineering.
+- Friday: run a SaaS health diagnostic or feature ROI check.
+- Career season: rehearse interview stories, operating altitude, and leadership gaps.
+
+## Install Options
+
+| Environment | Install |
+|---|---|
+| Claude Code / OpenClaw | `clawhub install product-manager-skills` |
+| Codex / Cursor / Windsurf | `npx skills add Digidai/product-manager-skills` |
+| Claude Projects | Upload `SKILL.md`, `knowledge/`, and `templates/` |
+| Any LLM with local file loading | Point the system prompt at `SKILL.md` and keep sibling folders intact |
 
 ## Structure
 
-```
-SKILL.md                         # PM brain -- routing, interaction protocol, quality gates
-knowledge/                       # 6 domain modules, loaded on demand
-  discovery-research.md          #   17.5 KB -- interviews, JTBD, OST, PoL probes
-  strategy-positioning.md        #   13.6 KB -- positioning, PESTEL, roadmaps, prioritization
-  artifacts-delivery.md          #   12.6 KB -- PRD, stories, epics, PRFAQ
-  finance-metrics.md             #   14.2 KB -- 32 SaaS metrics with formulas
-  career-leadership.md           #   15.5 KB -- PM to Director to VP to CPO
-  ai-product-craft.md            #   13.5 KB -- context engineering, agent patterns
-templates/                       # 12 output templates
-  prd.md, user-story.md, problem-statement.md,
-  positioning-statement.md, epic-hypothesis.md,
-  press-release.md, discovery-interview-plan.md,
-  opportunity-solution-tree.md, roadmap-plan.md,
-  business-health-scorecard.md
-  competitive-analysis.md, lean-ux-canvas.md
+```text
+SKILL.md
+knowledge/
+templates/
+examples/
+STARTER-PROMPTS.md
+README.zh-CN.md
 ```
 
-20 files. ~2,200 lines. ~130 KB. Everything a PM agent needs, nothing it doesn't.
+Core repo size: about 25 Markdown files, ~2,200 lines, ~130 KB of PM knowledge and templates.
 
----
+## Trust And Security
 
-## Trust & Security
+This project is instruction-only:
 
-This skill is **instruction-only**:
 - No executable scripts
 - No external network calls
 - No environment variables or credentials required
-- No persistent storage or privilege escalation
-- Every line is human-readable Markdown
+- No privilege escalation
+- Every shipped file is human-readable Markdown
 
-You can audit the entire skill in 10 minutes.
+## Feedback And Contribution
 
----
+- Open an issue if a framework is missing or a workflow feels weak.
+- Open a discussion if you want a new domain or stronger examples.
+- See [CONTRIBUTING.md](CONTRIBUTING.md) for the fastest way to give useful workflow feedback.
+- If the skill helped you, star the repo or share an output generated from the templates.
 
 ## License
 
-[CC BY-NC-SA 4.0](LICENSE) -- Use freely for non-commercial purposes. Attribution required.
+[CC BY-NC-SA 4.0](LICENSE)
 
----
-
-Built by [Gene Dai](https://genedai.me/). Distilled from real PM practice, not textbooks.
-
-If this skill saves you time, [give it a star on ClawHub](https://clawhub.ai/Digidai/product-manager-skills).
+Built by [Gene Dai](https://genedai.me/). Distilled from real product work, not textbook summaries.

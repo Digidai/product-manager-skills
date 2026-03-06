@@ -1,23 +1,36 @@
 {
   "name": "product-manager-skills",
-  "version": "0.3.0",
-  "description": "Senior PM agent with 6 knowledge domains, 12 templates, and 30+ frameworks. Discovery, strategy, delivery, 32 SaaS metrics with formulas, PM career coaching (IC to CPO), and AI product craft. Opinionated, evidence-driven, bias-to-action.",
+  "version": "0.3.1",
+  "description": "PM skill for Claude Code, Codex, Cursor, and Windsurf: diagnose SaaS metrics, critique PRDs, plan roadmaps, run discovery, and coach PM career transitions.",
   "keywords": [
+    "product-manager-skills",
     "openclaw-skill",
     "agent-skill",
+    "product-manager",
     "product-management",
+    "pm",
     "prd",
     "user-story",
     "roadmap",
+    "product-strategy",
+    "discovery",
+    "positioning",
+    "career-coaching",
     "saas-metrics",
     "claude-code",
+    "cursor",
+    "codex",
+    "windsurf",
     "ai-agent",
     "skill-md"
   ],
-  "homepage": "https://github.com/Digidai/product-manager-skills",
+  "homepage": "https://clawhub.ai/Digidai/product-manager-skills",
   "repository": {
     "type": "git",
     "url": "https://github.com/Digidai/product-manager-skills.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Digidai/product-manager-skills/issues"
   },
   "author": "Gene Dai <gene@genedai.me> (https://genedai.me/)",
   "license": "CC-BY-NC-SA-4.0",
@@ -25,6 +38,9 @@
     "SKILL.md",
     "knowledge/",
     "templates/",
+    "examples/",
+    "STARTER-PROMPTS.md",
+    "README.zh-CN.md",
     "README.md",
     "LICENSE"
   ]
