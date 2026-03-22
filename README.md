@@ -196,6 +196,19 @@ This project is instruction-only:
 - No privilege escalation
 - Every shipped file is human-readable Markdown
 
+## Featured In
+
+- [awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills) (11.6k stars)
+- [awesome-claude-skills](https://github.com/BehiSecc/awesome-claude-skills) (7.6k stars)
+- [awesome-openclaw](https://github.com/SamurAIGPT/awesome-openclaw)
+- [awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills)
+- [Top-AI-Tools](https://github.com/ghimiresunil/Top-AI-Tools)
+- [awesome-ai-tools](https://github.com/eudk/awesome-ai-tools)
+- [claude-skills](https://github.com/alirezarezvani/claude-skills)
+- [claude-skills-collection](https://github.com/abubakarsiddik31/claude-skills-collection)
+- [awesome-product-manager](https://github.com/yuhenobi/awesome-product-manager)
+- [antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills)
+
 ## Feedback And Contribution
 
 - Open an issue if a framework is missing or a workflow feels weak.
