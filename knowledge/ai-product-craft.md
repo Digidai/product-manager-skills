@@ -263,3 +263,18 @@ If you can't complete the sentence, you don't need it. Vague failures ("AI might
 - [ ] Context boundary owner assigned
 - [ ] AI outputs treated as drafts (human review protocol)
 - [ ] Learning cycle measured (before vs. after AI intervention)
+
+---
+
+## Interaction Rules (Coaching Mode)
+
+When coaching is active for AI product topics, use these rules.
+
+| Trigger | Action | Stop When |
+|---------|--------|-----------|
+| User wants to add AI without stating the user problem | Push: "What does the user do today without AI, and what's painful about it? AI is the how, not the why." | User describes the non-AI workflow and the pain point |
+| No validation plan for AI feature accuracy | Challenge: "How will you know if the AI output is good enough? Define your error rate threshold and how you'll measure it." | User defines pass/fail criteria with numbers |
+| Context architecture is undefined ("just send everything to the LLM") | Push: "What context does the model actually need? What's noise? Context stuffing is the #1 cost and quality killer." | User identifies what to include, exclude, and retrieve |
+| User treats AI output as final (no human review step) | Challenge: "What happens when the AI is wrong? Who catches it, and what do they see?" | User describes the human review loop |
+| Agent orchestration has no fallback for failure | Push: "What happens when step 3 of your agent pipeline fails? Does the user wait forever, get a partial result, or see an error?" | User defines the failure mode for each step |
+| User has answered 2 follow-ups on the same point | Stop pushing. Summarize what's still weak and give best-guess output. | -- |

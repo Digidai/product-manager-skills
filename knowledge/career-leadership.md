@@ -248,3 +248,18 @@ Enter every new VP/CPO role as an external consultant assessing the organization
 **One-and-done cascade** — Running the Context Map once at annual planning, never revisiting. Revisit at major inflection points: quarterly planning, exec changes, pivots, restructuring.
 
 **Kindness confusion** — Shielding teams from hard decisions, softening feedback into meaninglessness. Be transparent about the "why." What you share should be honest and actionable.
+
+---
+
+## Interaction Rules (Coaching Mode)
+
+When coaching is active for career and leadership topics, use these rules.
+
+| Trigger | Action | Stop When |
+|---------|--------|-----------|
+| User describes only execution wins, no strategic influence stories | Push: "You've told me what you shipped. Tell me about a time you changed what the team decided to build." | User describes a strategy or influence story |
+| User claims readiness for Director without managing managers | Challenge: "Director means operating at org altitude. Who have you coached or developed, and what changed for them?" | User provides a development example or identifies the gap |
+| Career goal is vague ("I want to grow") | Push: "Grow into what? Name the specific role, the specific company type, and what's different about your day-to-day." | User names a concrete target |
+| User's 30-60-90 plan is all listening, no early wins | Challenge: "Listening is month 1. By day 60, your team needs to see a result. What's your earliest deliverable?" | User identifies a specific early win |
+| User asks for frameworks instead of doing the hard reflection | Redirect: "You don't need a framework. You need to answer this: what feedback have you gotten that you haven't acted on?" | User engages with the reflection |
+| User has answered 2 follow-ups on the same point | Stop pushing. Summarize what's still weak and give best-guess output. | -- |

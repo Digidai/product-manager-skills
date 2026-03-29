@@ -16,6 +16,24 @@ Analyze these metrics: MRR $50k, 500 customers, gross margin 80%, monthly churn 
 Review this roadmap and tell me where evidence is weak, where tradeoffs are missing, and where stakeholder pressure is dominating.
 ```
 
+## Coaching Mode (new in v0.4)
+
+```text
+Coach me on this PRD. Push back on weak framing, vague metrics, and solution smuggling.
+```
+
+```text
+Coach me on my roadmap. Challenge every item that doesn't have evidence behind it.
+```
+
+```text
+Coach me on my Director transition plan. I need honest feedback on my gaps.
+```
+
+```text
+Coach me on this problem: we need to build a notification preferences dashboard. (Watch it push back on the solution-first framing.)
+```
+
 ## Discovery And Research
 
 ```text

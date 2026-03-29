@@ -155,6 +155,14 @@ This skill is optimized for a fast first useful draft:
 - If the task is genuinely exploratory, it can switch into guided mode one question at a time.
 - Every answer is expected to end with decisions made, assumptions to validate, and a recommended next step.
 
+### Coaching Mode (new in v0.4)
+
+Say "coach me" and the skill shifts from helpful assistant to demanding PM peer. It will push back on weak framing, challenge vague metrics, name anti-patterns in your thinking, and end with a verdict instead of a summary.
+
+Each knowledge domain has its own coaching rules. Discovery coaching pushes on evidence. Strategy coaching pushes on positioning specificity. Finance coaching pushes on retention before growth. Career coaching pushes on altitude gaps.
+
+Example: [Coaching a discovery session](examples/coaching-discovery.md)
+
 ## Built For Repeat Usage
 
 Most PM work is recurring. This skill is strongest when you reuse it weekly:
@@ -184,7 +192,7 @@ STARTER-PROMPTS.md
 README.zh-CN.md
 ```
 
-Core repo size: about 27 Markdown files, ~2,800 lines, under 200 KB of PM knowledge and templates.
+Core repo size: 27 Markdown files, ~3,000 lines, under 200 KB of PM knowledge, templates, and coaching rules.
 
 ## Trust And Security
 
