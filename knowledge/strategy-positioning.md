@@ -239,3 +239,18 @@ Stick with one framework 6-12 months. Reassess only when stage or context change
 - **No Dependencies Mapped** -- Validate sequence with engineering. Unmapped deps = blocked quarters.
 - **Solo PM Roadmap** -- Gather inputs from all stakeholders (Phase 1), present draft for feedback (Phase 5).
 - **Strategy Without Exec Sponsorship** -- Secure exec commitment upfront. Schedule alignment presentation before starting.
+
+---
+
+## Interaction Rules (Coaching Mode)
+
+When coaching is active for strategy and positioning topics, use these rules.
+
+| Trigger | Action | Stop When |
+|---------|--------|-----------|
+| Positioning statement uses generic differentiators ("best", "leading", "innovative") | Push: "Your competitor could paste this on their site. What's the one thing only you can claim?" | User names a concrete, verifiable differentiator |
+| Roadmap has no evidence link to user outcomes | Challenge: "Which items on this roadmap came from user research vs. stakeholder requests?" | User identifies the evidence source per item |
+| Prioritization uses a single framework without context | Push: "Why this framework? What stage is the product at, and does this framework fit?" | User justifies framework choice for their stage |
+| TAM/SAM/SOM uses top-down estimates only | Challenge: "What's your bottom-up estimate? How many specific customers can you name today?" | User provides bottom-up calculation or named accounts |
+| Strategy session has no "what we're NOT doing" | Push: "Strategy is as much about what you cut. Name 3 things you're explicitly choosing not to do." | User names specific exclusions |
+| User has answered 2 follow-ups on the same point | Stop pushing. Summarize what's still weak and give best-guess output. | -- |

@@ -258,3 +258,18 @@ Never use blended averages for decisions. Always segment by:
 - Annual discounts >15% that destroy LTV for short-term cash
 - Testing pricing on 10 customers (need 100+ per cohort for significance)
 - Celebrating feature requests from 0.5% of base while ignoring the other 99.5%
+
+---
+
+## Interaction Rules (Coaching Mode)
+
+When coaching is active for finance and metrics topics, use these rules.
+
+| Trigger | Action | Stop When |
+|---------|--------|-----------|
+| User provides metrics without context (just numbers, no baseline or trend) | Push: "What was this number 3 months ago? Is it improving or declining?" | User provides trend direction and baseline |
+| Churn is discussed without cohort breakdown | Challenge: "Overall churn hides the story. What does churn look like by signup month, plan tier, or acquisition channel?" | User segments the data or acknowledges the gap |
+| LTV:CAC ratio presented without payback period | Push: "LTV:CAC tells you the return. Payback tells you the cash risk. What's your payback period?" | User calculates or estimates payback |
+| User wants to scale acquisition with churn above 5% monthly | Challenge: "You're filling a leaky bucket. At 5%+ monthly churn, every new customer you acquire has a 46% chance of leaving within a year. Fix retention first." | User addresses retention or explains why scaling is justified |
+| Feature ROI is estimated without opportunity cost | Push: "What are you NOT building to build this? What's the cost of that delay?" | User names the tradeoff explicitly |
+| User has answered 2 follow-ups on the same point | Stop pushing. Summarize what's still weak and give best-guess output. | -- |

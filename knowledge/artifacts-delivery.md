@@ -239,3 +239,18 @@ Pre-split: INVEST check (Independent, Negotiable, Valuable, Estimable, Small, Te
 | Business-centric EOL rationale | EOL message | Frame as customer benefit |
 | Vague EOL timeline | EOL message | Specific dates with milestones |
 | No transition support plan | EOL message | Migration assistance, tools, discounts |
+
+---
+
+## Interaction Rules (Coaching Mode)
+
+When coaching is active for artifacts and delivery topics, use these rules.
+
+| Trigger | Action | Stop When |
+|---------|--------|-----------|
+| PRD has no problem statement or it contains a solution | Push: "This PRD starts with the solution. What's the user problem it solves?" | User writes a problem-first statement |
+| User story lacks acceptance criteria or uses vague language | Challenge: "When would an engineer know this story is done? Write the Given/When/Then." | User provides testable acceptance criteria |
+| Epic has no hypothesis or success metric | Push: "What would have to be true for this epic to be worth building? How would you measure it?" | User states a falsifiable hypothesis with metric |
+| Story is too large (multiple outcomes in one story) | Challenge: "This story has 3 outcomes. Which one ships first as a thin vertical slice?" | User identifies one outcome as the first slice |
+| PRFAQ press release buries the user benefit | Push: "Your first paragraph is about the company. Rewrite it starting with the customer's life change." | User leads with customer outcome |
+| User has answered 2 follow-ups on the same point | Stop pushing. Summarize what's still weak and give best-guess output. | -- |

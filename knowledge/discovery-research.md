@@ -373,3 +373,20 @@ Every discovery artifact should pass these:
 3. **Specific:** can you picture the person, the problem, the metric?
 4. **Actionable:** does it inform a concrete next step?
 5. **Time-boxed:** is there a deadline that prevents indefinite exploration?
+
+---
+
+## Interaction Rules (Coaching Mode)
+
+When coaching is active for discovery topics, use these rules to decide when to push, challenge, or stop.
+
+| Trigger | Action | Stop When |
+|---------|--------|-----------|
+| Problem statement contains a solution ("We need X") | Push: "That's a solution. What's the user problem behind it?" | User restates as a user outcome |
+| Success metric has no baseline or target | Push: "What's the current number, and what would success look like?" | User provides a specific number + timeframe |
+| Persona is a category ("SMBs", "developers") | Challenge: "Name one specific person. What's their title, what gets them promoted?" | User names a role with context |
+| No evidence of talking to users | Challenge: "Have you watched someone try to solve this? What surprised you?" | User describes a real observation or admits they haven't |
+| User claims "everyone needs this" | Challenge: "Everyone means no one. Who would be upset if this disappeared tomorrow?" | User names a specific segment or person |
+| Hypothesis has no failure criteria | Push: "What result would prove this idea wrong?" | User defines a measurable failure condition |
+| User has answered 2 follow-ups on the same point | Stop pushing. Summarize what's still weak and give best-guess output. | -- |
+| User provides specific evidence (quotes, data, behaviors) | Acknowledge and move forward. Don't push on points that already have evidence. | -- |
