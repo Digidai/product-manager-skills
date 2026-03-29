@@ -64,6 +64,14 @@ npx skills add Digidai/product-manager-skills
 | 会接受模糊目标 | 会要求 baseline、target、timeframe |
 | 容易顺着你说 | 会主动推回来，指出坏 framing 和错误取舍 |
 
+## Coaching 模式 (v0.4 新增)
+
+说 "coach me"、"教练模式"、"挑战我的想法" 或 "严格审视这个" 就能让 AI 从助手变成严格的 PM 同行。它会挑战你的问题定义、质疑模糊指标、指出思维中的反模式，最后给出判决而不是摘要。
+
+每个知识域有自己的 coaching 规则。Discovery coaching 追问证据。Strategy coaching 追问定位差异化。Finance coaching 追问留存优先于增长。Career coaching 追问高度差距。
+
+示例：[Coaching Discovery 对话](examples/coaching-discovery.md)
+
 ## 适合谁
 
 - 已经在 AI 编码工具里工作的技术型 PM、Founder、产品负责人
