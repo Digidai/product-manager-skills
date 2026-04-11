@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+# Lightweight update check for product-manager-skills
+# Compares local VERSION against GitHub remote VERSION
+# Cache: 60 min (up-to-date), 12 hours (upgrade available)
+
+set -euo pipefail
+
+SKILL_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+LOCAL="$(cat "$SKILL_DIR/VERSION" 2>/dev/null | tr -d '[:space:]' || echo "unknown")"
+
+CACHE_DIR="${HOME}/.product-manager-skills"
+CACHE_FILE="$CACHE_DIR/last-update-check"
+mkdir -p "$CACHE_DIR"
+
+now=$(date +%s)
+
+if [ -f "$CACHE_FILE" ]; then
+  # macOS uses stat -f%m, Linux uses stat -c%Y
+  mtime=$(stat -f%m "$CACHE_FILE" 2>/dev/null || stat -c%Y "$CACHE_FILE" 2>/dev/null || echo 0)
+  age=$(( now - mtime ))
+  cached=$(cat "$CACHE_FILE" 2>/dev/null || true)
+
+  if [ "$cached" = "UP_TO_DATE" ] && [ "$age" -lt 3600 ]; then
+    exit 0
+  fi
+
+  if echo "$cached" | grep -q "^UPGRADE_AVAILABLE" && [ "$age" -lt 43200 ]; then
+    echo "$cached"
+    exit 0
+  fi
+fi
+
+# Fetch remote version (5s timeout, fail silently)
+REMOTE="$(curl -sf --max-time 5 \
+  "https://raw.githubusercontent.com/Digidai/product-manager-skills/main/VERSION" \
+  2>/dev/null | tr -d '[:space:]' || true)"
+
+# Validate: must look like a version number
+if [ -z "$REMOTE" ] || ! echo "$REMOTE" | grep -qE '^[0-9]+\.[0-9.]+$'; then
+  echo "UP_TO_DATE" > "$CACHE_FILE"
+  exit 0
+fi
+
+if [ "$LOCAL" = "$REMOTE" ]; then
+  echo "UP_TO_DATE" > "$CACHE_FILE"
+else
+  result="UPGRADE_AVAILABLE $LOCAL $REMOTE"
+  echo "$result" > "$CACHE_FILE"
+  echo "$result"
+fi

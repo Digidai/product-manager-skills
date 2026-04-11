@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 Format follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [0.5.1] - 2026-04-12
+
+### Added
+- Update notification system: `bin/update-check` script compares local VERSION against GitHub remote
+- `VERSION` file for version tracking
+- SKILL.md preamble that runs update check at session start
+- Update prompts for all install methods (clawhub, npx, git)
+
+### Changed
+- package.json `files` now includes `VERSION` and `bin/`
+- README security section updated to reflect the optional update check script
+- README badge and tagline updated for accuracy
+
 ## [0.5.0] - 2026-04-11
 
 ### Added

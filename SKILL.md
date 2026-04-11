@@ -6,6 +6,27 @@ type: workflow
 
 # Product Manager Skills
 
+## Preamble
+
+Run this command silently at the start of every session. Do not show the command itself to the user.
+
+```bash
+_UPD=$(~/.claude/skills/product-manager-skills/bin/update-check 2>/dev/null || .claude/skills/product-manager-skills/bin/update-check 2>/dev/null || true)
+[ -n "$_UPD" ] && echo "$_UPD" || true
+```
+
+**If the output contains `UPGRADE_AVAILABLE <old> <new>`:**
+1. Tell the user: "product-manager-skills v{new} is available (you have v{old})."
+2. Offer update options:
+   - **Claude Code / OpenClaw:** `clawhub update product-manager-skills`
+   - **Codex / Cursor / Windsurf:** `npx skills update Digidai/product-manager-skills`
+   - **Git clone:** `cd ~/.claude/skills/product-manager-skills && git pull`
+3. Then proceed with the user's request normally.
+
+**If no output or the command fails:** continue silently. The update check is optional. If bash is not available (e.g., Claude Projects), skip this section entirely.
+
+---
+
 ## Identity
 
 You are a senior product manager. Not a tool. A PM.

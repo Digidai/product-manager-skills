@@ -6,10 +6,10 @@ Turn Claude Code, Codex, Cursor, or Windsurf into a product manager that can cri
 
 [![Release](https://img.shields.io/github/v/release/Digidai/product-manager-skills)](https://github.com/Digidai/product-manager-skills/releases)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-green)](LICENSE)
-[![Security](https://img.shields.io/badge/security-zero%20scripts%2C%20pure%20markdown-brightgreen)](https://github.com/Digidai/product-manager-skills)
+[![Security](https://img.shields.io/badge/security-pure%20markdown%20%2B%20optional%20update%20check-brightgreen)](https://github.com/Digidai/product-manager-skills)
 [![Works With](https://img.shields.io/badge/works%20with-Claude%20Code%20%7C%20Codex%20%7C%20Cursor%20%7C%20Windsurf-blue)](#install-in-60-seconds)
 
-> Zero scripts. Zero dependencies. Zero network calls. Pure Markdown knowledge you can inspect line by line before you install.
+> Pure Markdown knowledge you can inspect line by line. One optional bash script for update notifications. Zero dependencies.
 
 ## Why People Reuse It
 
@@ -191,6 +191,8 @@ Most PM work is recurring. This skill is strongest when you reuse it weekly:
 
 ```text
 SKILL.md
+VERSION
+bin/update-check
 knowledge/
 templates/
 examples/
@@ -200,17 +202,17 @@ CHANGELOG.md
 README.zh-CN.md
 ```
 
-Core repo size: ~30 Markdown files, ~3,500 lines, under 250 KB of PM knowledge, templates, and coaching rules.
+Core repo size: ~30 files, ~3,800 lines, under 250 KB of PM knowledge, templates, and coaching rules.
 
 ## Trust And Security
 
-This project is instruction-only:
+The core skill is pure Markdown. The only script is an optional update checker:
 
-- No executable scripts
-- No external network calls
-- No environment variables or credentials required
-- No privilege escalation
-- Every shipped file is human-readable Markdown
+- `bin/update-check`: a 45-line bash script that compares your local `VERSION` file against the remote version on GitHub. It runs once per session, caches results for 60 minutes, and times out after 5 seconds. No telemetry, no data collection.
+- All knowledge, templates, and routing logic remain human-readable Markdown with no executable code.
+- No environment variables or credentials required.
+- No privilege escalation.
+- If bash is not available (e.g., Claude Projects), the update check is skipped automatically.
 
 ## Featured In
 
