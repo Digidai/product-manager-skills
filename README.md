@@ -29,7 +29,9 @@ Most AI PM tooling is good at writing polished nonsense. This skill is designed 
 | **Director readiness coaching** | "I'm a senior PM interviewing for Director roles in 90 days. Diagnose my gaps and coach me." | [Director coaching demo](examples/director-coaching.md) |
 
 More prompts: [STARTER-PROMPTS.md](STARTER-PROMPTS.md)  
-中文说明: [README.zh-CN.md](README.zh-CN.md)
+中文说明: [README.zh-CN.md](README.zh-CN.md)  
+Core philosophy: [ETHOS.md](ETHOS.md)  
+Version history: [CHANGELOG.md](CHANGELOG.md)
 
 ## Install In 60 Seconds
 
@@ -146,6 +148,10 @@ Full example: [examples/director-coaching.md](examples/director-coaching.md)
 - Users who only want passive template filling and never want the AI to challenge the framing.
 - Non-technical buyers who prefer turnkey SaaS onboarding over local or repo-based installation.
 
+## PM Sprint Workflow (new in v0.5)
+
+Say "take this from idea to PRD" or "full PM sprint on this feature" and the skill runs a 6-phase end-to-end workflow: Discover, Position, Prioritize, Specify, Validate, Measure. Each phase feeds output to the next. Skip, reorder, or stop at any phase.
+
 ## Interaction Style
 
 This skill is optimized for a fast first useful draft:
@@ -153,7 +159,7 @@ This skill is optimized for a fast first useful draft:
 - If the request is clear enough, it answers immediately and labels assumptions inline.
 - If context is partial, it gives the best draft first and only asks the minimum follow-up questions needed.
 - If the task is genuinely exploratory, it can switch into guided mode one question at a time.
-- Every answer is expected to end with decisions made, assumptions to validate, and a recommended next step.
+- Every answer ends with decisions made, assumptions to validate, recommended next step, and a completion status (DONE, DONE_WITH_CONCERNS, BLOCKED, or NEEDS_CONTEXT).
 
 ### Coaching Mode (new in v0.4)
 
@@ -189,10 +195,12 @@ knowledge/
 templates/
 examples/
 STARTER-PROMPTS.md
+ETHOS.md
+CHANGELOG.md
 README.zh-CN.md
 ```
 
-Core repo size: 27 Markdown files, ~3,000 lines, under 200 KB of PM knowledge, templates, and coaching rules.
+Core repo size: ~30 Markdown files, ~3,500 lines, under 250 KB of PM knowledge, templates, and coaching rules.
 
 ## Trust And Security
 

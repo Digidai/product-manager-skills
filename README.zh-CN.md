@@ -64,6 +64,10 @@ npx skills add Digidai/product-manager-skills
 | 会接受模糊目标 | 会要求 baseline、target、timeframe |
 | 容易顺着你说 | 会主动推回来，指出坏 framing 和错误取舍 |
 
+## PM Sprint 工作流 (v0.5 新增)
+
+说"从想法到 PRD"或"帮我完整做一遍这个功能"，技能会启动 6 阶段端到端工作流：发现、定位、优先级、规格化、验证、度量。每个阶段的输出会喂给下一个阶段。可以跳过、重排或随时停止。
+
 ## Coaching 模式 (v0.4 新增)
 
 说 "coach me"、"教练模式"、"挑战我的想法" 或 "严格审视这个" 就能让 AI 从助手变成严格的 PM 同行。它会挑战你的问题定义、质疑模糊指标、指出思维中的反模式，最后给出判决而不是摘要。
@@ -99,5 +103,7 @@ npx skills add Digidai/product-manager-skills
 - 英文主 README：[README.md](README.md)
 - 快速提示词：[STARTER-PROMPTS.md](STARTER-PROMPTS.md)
 - 技能入口：[SKILL.md](SKILL.md)
+- 核心哲学：[ETHOS.md](ETHOS.md)
+- 版本历史：[CHANGELOG.md](CHANGELOG.md)
 
 [CC BY-NC-SA 4.0](LICENSE)

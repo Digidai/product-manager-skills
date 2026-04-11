@@ -1,0 +1,35 @@
+# SKILL.md Template
+
+This file documents the future template generation pattern for SKILL.md.
+
+## How It Works
+
+When the project grows beyond 8+ knowledge domains, SKILL.md should be generated
+from this template rather than hand-maintained. The generation script reads source
+metadata and fills placeholders.
+
+## Placeholders
+
+| Placeholder | Source | Description |
+|---|---|---|
+| `{{IDENTITY}}` | This file, static | Identity and operating principles |
+| `{{VOICE_GUIDELINES}}` | This file, static | Voice rules and slop blacklist |
+| `{{INTERACTION_PROTOCOL}}` | This file, static | Modes, session memory, coaching |
+| `{{ROUTING_TABLE}}` | Auto-generated from `knowledge/*.md` frontmatter | Intent-to-framework mapping |
+| `{{TEMPLATE_INDEX}}` | Auto-generated from `templates/*.md` headers | Template path and usage mapping |
+| `{{QUALITY_GATES}}` | This file, static | Universal quality gates |
+| `{{PM_SPRINT}}` | This file, static | Sprint workflow phases |
+| `{{COMPLETION_STATUS}}` | This file, static | Status protocol |
+
+## Generation Command (future)
+
+```bash
+# Not yet implemented. Target: when project reaches 10+ knowledge modules.
+node scripts/gen-skill-docs.js
+```
+
+## Why Not Now
+
+At 6 knowledge modules and ~280 lines of SKILL.md, hand maintenance is fine.
+The cost of maintaining a build step outweighs the drift risk at this scale.
+This file exists as a design document for when the project outgrows hand editing.
