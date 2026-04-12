@@ -208,7 +208,7 @@ README.md
 LICENSE
 ```
 
-Current footprint stays small: 7 knowledge modules, 12 templates, 6 worked examples, and 2 small shell scripts.
+Current footprint stays small: 7 knowledge modules, 12 templates, 8 worked examples, and 2 small shell scripts.
 
 ## Trust And Security
 
