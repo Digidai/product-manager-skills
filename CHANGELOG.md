@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 Format follows [Keep a Changelog](https://keepachangelog.com/).
 
-## [Unreleased]
+## [0.5.3] - 2026-04-12
 
 ### Added
 - `bin/validate-release`: lightweight release consistency checker for versions, packaged assets, and doc drift
