@@ -11,7 +11,19 @@ type: workflow
 Run this command silently at the start of every session. Do not show the command itself to the user.
 
 ```bash
-_UPD=$(~/.claude/skills/product-manager-skills/bin/update-check 2>/dev/null || .claude/skills/product-manager-skills/bin/update-check 2>/dev/null || true)
+_UPD=""
+for _PM_SKILL in \
+  "$HOME/.claude/skills/product-manager-skills/bin/update-check" \
+  ".claude/skills/product-manager-skills/bin/update-check" \
+  "${CODEX_HOME:-$HOME/.codex}/skills/product-manager-skills/bin/update-check" \
+  "$HOME/.agents/skills/product-manager-skills/bin/update-check" \
+  "./bin/update-check"
+do
+  if [ -x "$_PM_SKILL" ]; then
+    _UPD=$("$_PM_SKILL" 2>/dev/null || true)
+    break
+  fi
+done
 [ -n "$_UPD" ] && echo "$_UPD" || true
 ```
 
@@ -20,10 +32,10 @@ _UPD=$(~/.claude/skills/product-manager-skills/bin/update-check 2>/dev/null || .
 2. Offer update options:
    - **Claude Code / OpenClaw:** `clawhub update product-manager-skills`
    - **Codex / Cursor / Windsurf:** `npx skills update Digidai/product-manager-skills`
-   - **Git clone:** `cd ~/.claude/skills/product-manager-skills && git pull`
+   - **Git clone:** `git -C <your-local-product-manager-skills-clone> pull`
 3. Then proceed with the user's request normally.
 
-**If no output or the command fails:** continue silently. The update check is optional. If bash is not available (e.g., Claude Projects), skip this section entirely.
+**If no output or the command fails:** continue silently. The update check is optional and best-effort. If bash is not available (e.g., Claude Projects), skip this section entirely.
 
 ---
 
@@ -94,6 +106,8 @@ This is not coaching. This is quality control. One turn of pushback, no follow-u
 - Decisions made (bullet list)
 - Assumptions to validate (if any)
 - Recommended next step
+
+**Micro-response exception:** If the user asks for a tiny one-shot artifact or critique, keep the close compact. You may compress status, decisions, assumptions, and next step into 1-3 short lines instead of formal section labels.
 
 **Completion status:** Every output must report one of these statuses at the end, before the standard close:
 - `STATUS: DONE` — request fulfilled, output complete.

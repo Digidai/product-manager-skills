@@ -10,6 +10,25 @@ assignees: ""
 
 What were you trying to do?
 
+## Install Surface
+
+Where were you running the skill?
+
+- Claude Code / OpenClaw
+- Codex
+- Cursor
+- Windsurf
+- Claude Projects
+- Git clone / local loader
+- Other
+
+## Version / Distribution
+
+How did you install it, and what version were you on?
+
+- Install method: `clawhub install`, `npx skills add`, git clone, copied into project, other
+- Version or tag (for example `0.5.2` or commit SHA)
+
 ## Prompt
 
 Paste the prompt you used.
@@ -30,6 +49,7 @@ Which area is this mostly about?
 - Strategy & Positioning
 - Artifacts & Delivery
 - Finance & Metrics
+- Growth & PLG
 - Career & Leadership
 - AI Product Craft
 

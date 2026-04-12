@@ -28,7 +28,7 @@
 **What:** Move SKILL.md to a template-based generation system (SKILL.md.tmpl + gen script) where placeholders like `{{ROUTING_TABLE}}` and `{{QUALITY_GATES}}` are filled from source metadata.
 **Why:** As knowledge modules and routing rules grow, hand-maintaining SKILL.md will drift from actual content. gstack uses this pattern with `gen-skill-docs.ts` to keep docs in sync.
 **Depends on:** Project reaching 10+ knowledge modules or frequent routing table drift.
-**Context:** At current scale (6 knowledge modules, 239-line SKILL.md), hand maintenance works. Revisit when the skill grows to 8+ domains or when template count exceeds 15.
+**Context:** At current scale (7 knowledge modules, ~330-line SKILL.md), hand maintenance still works, but drift is now real enough to justify a lightweight release consistency check. Revisit generation when the skill grows to 8+ domains or when template count exceeds 15.
 
 ### Multi-Platform Host Config
 **Priority:** P3 | **Effort:** M

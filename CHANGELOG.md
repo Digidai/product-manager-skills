@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 Format follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [Unreleased]
+
+### Added
+- `bin/validate-release`: lightweight release consistency checker for versions, packaged assets, and doc drift
+- PM Sprint worked examples: `examples/pm-sprint-idea-to-prd.md` and `examples/pm-sprint-sales-request-to-prd.md`
+- Growth & PLG activation recovery example: `examples/growth-plg-activation-recovery.md`
+
+### Changed
+- `SKILL.md` update-check preamble now tries more host-specific install locations before skipping
+- `SKILL.md` now allows a compact close for tiny one-shot requests
+- `README.md` and `README.zh-CN.md` now distinguish the optional runtime update check from the maintainer-only release validator and link the newer worked examples
+- `package.json` now ships `ETHOS.md`, `CHANGELOG.md`, and `CONTRIBUTING.md`, and exposes `npm run check:release`
+- `SKILL.md.tmpl`, `TODOS.md`, and the workflow-gap issue template were refreshed to match the current 7-domain state
+
 ## [0.5.2] - 2026-04-12
 
 ### Added

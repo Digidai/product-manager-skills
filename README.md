@@ -9,7 +9,7 @@ Turn Claude Code, Codex, Cursor, or Windsurf into a product manager that can cri
 [![Security](https://img.shields.io/badge/security-pure%20markdown%20%2B%20optional%20update%20check-brightgreen)](https://github.com/Digidai/product-manager-skills)
 [![Works With](https://img.shields.io/badge/works%20with-Claude%20Code%20%7C%20Codex%20%7C%20Cursor%20%7C%20Windsurf-blue)](#install-in-60-seconds)
 
-> Pure Markdown knowledge you can inspect line by line. One optional bash script for update notifications. Zero dependencies.
+> Human-readable Markdown you can inspect line by line. One optional runtime update check for installed hosts, plus a maintainer-only release validator. Zero runtime dependencies.
 
 ## Why People Reuse It
 
@@ -32,6 +32,7 @@ More prompts: [STARTER-PROMPTS.md](STARTER-PROMPTS.md)
 中文说明: [README.zh-CN.md](README.zh-CN.md)  
 Core philosophy: [ETHOS.md](ETHOS.md)  
 Version history: [CHANGELOG.md](CHANGELOG.md)
+Worked examples: [Growth & PLG readiness](examples/growth-plg-readiness.md), [Growth activation recovery](examples/growth-plg-activation-recovery.md), [PM Sprint from idea to PRD](examples/pm-sprint-idea-to-prd.md), [PM Sprint from sales request to PRD](examples/pm-sprint-sales-request-to-prd.md)
 
 ## Install In 60 Seconds
 
@@ -184,7 +185,7 @@ Most PM work is recurring. This skill is strongest when you reuse it weekly:
 | Environment | Install |
 |---|---|
 | Claude Code / OpenClaw | `clawhub install product-manager-skills` |
-| Codex / Cursor / Windsurf | `npx skills add Digidai/product-manager-skills` |
+| Codex / Cursor / Windsurf / GitHub-based skill loaders | `npx skills add Digidai/product-manager-skills` |
 | Claude Projects | Upload `SKILL.md`, `knowledge/`, and `templates/` |
 | Any LLM with local file loading | Point the system prompt at `SKILL.md` and keep sibling folders intact |
 
@@ -194,26 +195,31 @@ Most PM work is recurring. This skill is strongest when you reuse it weekly:
 SKILL.md
 VERSION
 bin/update-check
+bin/validate-release
 knowledge/
 templates/
 examples/
 STARTER-PROMPTS.md
 ETHOS.md
 CHANGELOG.md
+CONTRIBUTING.md
 README.zh-CN.md
+README.md
+LICENSE
 ```
 
-Core repo size: ~30 files, ~3,800 lines, under 250 KB of PM knowledge, templates, and coaching rules.
+Current footprint stays small: 7 knowledge modules, 12 templates, 6 worked examples, and 2 small shell scripts.
 
 ## Trust And Security
 
-The core skill is pure Markdown. The only script is an optional update checker:
+The runtime behavior is still Markdown-first. The repo ships two small shell scripts with different purposes:
 
-- `bin/update-check`: a 45-line bash script that compares your local `VERSION` file against the remote version on GitHub. It runs once per session, caches results for 60 minutes, and times out after 5 seconds. No telemetry, no data collection.
+- `bin/update-check`: an optional, best-effort runtime check that compares your local `VERSION` file against the remote version on GitHub. It runs only on hosts that can execute companion scripts, caches results, and times out after 5 seconds. No telemetry, no data collection.
+- `bin/validate-release`: a maintainer-facing consistency check used before publishing. It validates version sync and packaged assets, but it is not invoked during normal skill usage.
 - All knowledge, templates, and routing logic remain human-readable Markdown with no executable code.
 - No environment variables or credentials required.
 - No privilege escalation.
-- If bash is not available (e.g., Claude Projects), the update check is skipped automatically.
+- If bash is not available, or the host stores the skill in a different location, the runtime update check is skipped automatically.
 
 ## Featured In
 

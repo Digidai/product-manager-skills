@@ -21,7 +21,7 @@
 clawhub install product-manager-skills
 ```
 
-### Codex / Cursor / Windsurf
+### Codex / Cursor / Windsurf / 基于 GitHub 的 skill loader
 
 ```bash
 npx skills add Digidai/product-manager-skills
@@ -38,6 +38,7 @@ npx skills add Digidai/product-manager-skills
 ```
 
 更多可直接复用的提示词见：[STARTER-PROMPTS.md](STARTER-PROMPTS.md)
+更多完整示例见：[examples/growth-plg-readiness.md](examples/growth-plg-readiness.md)、[examples/growth-plg-activation-recovery.md](examples/growth-plg-activation-recovery.md)、[examples/pm-sprint-idea-to-prd.md](examples/pm-sprint-idea-to-prd.md) 和 [examples/pm-sprint-sales-request-to-prd.md](examples/pm-sprint-sales-request-to-prd.md)
 
 ## 三个最值得先试的场景
 
@@ -90,13 +91,14 @@ npx skills add Digidai/product-manager-skills
 
 ## 信任与安全
 
-这是一个纯 Markdown 项目：
+运行时能力仍然以纯 Markdown 为主。仓库里有两个很小的 shell 脚本，各自用途不同：
 
-- 没有脚本
-- 没有网络调用
+- `bin/update-check`：可选的运行时更新检查。它会把本地 `VERSION` 和 GitHub 上的远端版本做比对，只在支持脚本执行的宿主里尝试运行，带超时和缓存，不上传业务数据。
+- `bin/validate-release`：维护者发布前使用的一致性校验脚本，用来检查版本号、打包内容和文档同步情况。正常使用技能时不会运行它。
+- knowledge、templates、路由逻辑仍然都是可审查的 Markdown
 - 不需要密钥
 - 没有提权
-- 所有内容都可审查
+- 如果宿主环境不支持 bash，或者技能安装路径不匹配，运行时更新检查会自动跳过
 
 ## 相关文件
 
@@ -105,5 +107,6 @@ npx skills add Digidai/product-manager-skills
 - 技能入口：[SKILL.md](SKILL.md)
 - 核心哲学：[ETHOS.md](ETHOS.md)
 - 版本历史：[CHANGELOG.md](CHANGELOG.md)
+- 贡献方式：[CONTRIBUTING.md](CONTRIBUTING.md)
 
 [CC BY-NC-SA 4.0](LICENSE)

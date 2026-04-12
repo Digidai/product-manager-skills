@@ -1,0 +1,77 @@
+#!/usr/bin/env bash
+# Lightweight release consistency checks for product-manager-skills
+
+set -euo pipefail
+
+ROOT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$ROOT_DIR"
+
+fail() {
+  echo "ERROR: $*" >&2
+  exit 1
+}
+
+pass() {
+  echo "OK: $*"
+}
+
+VERSION_FILE="$(tr -d '[:space:]' < VERSION)"
+PACKAGE_VERSION="$(sed -n 's/.*"version":[[:space:]]*"\([^"]*\)".*/\1/p' package.json | head -n 1)"
+
+[ -n "$PACKAGE_VERSION" ] || fail "Could not parse package.json version"
+[ "$VERSION_FILE" = "$PACKAGE_VERSION" ] || fail "VERSION ($VERSION_FILE) does not match package.json ($PACKAGE_VERSION)"
+pass "Version files are in sync"
+
+for required in SKILL.md VERSION README.md README.zh-CN.md ETHOS.md CHANGELOG.md STARTER-PROMPTS.md LICENSE; do
+  [ -e "$required" ] || fail "Missing required file: $required"
+done
+
+for required_dir in bin knowledge templates examples; do
+  [ -d "$required_dir" ] || fail "Missing required directory: $required_dir"
+done
+pass "Required repo files exist"
+
+PACKAGE_FILES="$(
+  awk '
+    /"files":[[:space:]]*\[/ { in_files=1; next }
+    in_files && /\]/ { in_files=0; next }
+    in_files {
+      gsub(/^[[:space:]]*"/, "")
+      gsub(/"[[:space:]]*,?[[:space:]]*$/, "")
+      print
+    }
+  ' package.json
+)"
+for shipped in SKILL.md VERSION bin/ knowledge/ templates/ examples/ STARTER-PROMPTS.md ETHOS.md CHANGELOG.md CONTRIBUTING.md README.zh-CN.md README.md LICENSE; do
+  echo "$PACKAGE_FILES" | grep -qx "$shipped" || fail "package.json files is missing $shipped"
+done
+pass "package.json files covers required shipped assets"
+
+grep -q -- '- Growth & PLG' .github/ISSUE_TEMPLATE/workflow-gap.md || fail "Workflow gap issue template is missing Growth & PLG"
+pass "Issue template includes all current domains"
+
+grep -q 'runtime update check' README.md || fail "README.md should describe the optional runtime update check"
+grep -q 'maintainer-only release validator' README.md || fail "README.md should distinguish the maintainer-only release validator"
+grep -q 'bin/validate-release' README.md || fail "README.md structure/trust sections should mention bin/validate-release"
+grep -q '可选的运行时更新检查' README.zh-CN.md || fail "README.zh-CN should describe the optional runtime update check"
+grep -q '维护者发布前使用的一致性校验脚本' README.zh-CN.md || fail "README.zh-CN should distinguish the maintainer-only release validator"
+pass "README trust sections are aligned"
+
+grep -q 'GitHub-based skill loaders' README.md || fail "README.md install docs should mention GitHub-based skill loaders"
+grep -q '基于 GitHub 的 skill loader' README.zh-CN.md || fail "README.zh-CN install docs should mention GitHub-based skill loaders"
+pass "Install docs are aligned across languages"
+
+grep -q 'CODEX_HOME' SKILL.md || fail "SKILL.md preamble is missing CODEX_HOME fallback"
+grep -q '\.agents/skills/product-manager-skills/bin/update-check' SKILL.md || fail "SKILL.md preamble is missing .agents fallback"
+pass "SKILL.md preamble includes broader host fallbacks"
+
+grep -q 'seven knowledge domains' package.json || fail "package.json description should mention seven knowledge domains"
+grep -q 'product-led-growth' package.json || fail "package.json keywords should include product-led-growth"
+grep -q 'ai-product' package.json || fail "package.json keywords should include ai-product"
+pass "package.json metadata reflects current positioning"
+
+grep -q '## Install Surface' .github/ISSUE_TEMPLATE/workflow-gap.md || fail "Workflow gap issue template should collect install surface"
+grep -q '## Version / Distribution' .github/ISSUE_TEMPLATE/workflow-gap.md || fail "Workflow gap issue template should collect version/distribution details"
+pass "Issue template collects cross-platform reproduction details"
+
+echo "All release checks passed."
