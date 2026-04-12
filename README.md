@@ -9,7 +9,7 @@ Turn Claude Code, Codex, Cursor, or Windsurf into a product manager that can cri
 [![Security](https://img.shields.io/badge/security-pure%20markdown%20%2B%20optional%20update%20check-brightgreen)](https://github.com/Digidai/product-manager-skills)
 [![Works With](https://img.shields.io/badge/works%20with-Claude%20Code%20%7C%20Codex%20%7C%20Cursor%20%7C%20Windsurf-blue)](#install-in-60-seconds)
 
-> Human-readable Markdown you can inspect line by line. One optional runtime update check for installed hosts, plus a maintainer-only release validator. Zero runtime dependencies.
+> Human-readable Markdown you can inspect line by line. Optional helper scripts for manual maintenance, zero automatic runtime execution.
 
 ## Why People Reuse It
 
@@ -212,14 +212,14 @@ Current footprint stays small: 7 knowledge modules, 12 templates, 8 worked examp
 
 ## Trust And Security
 
-The runtime behavior is still Markdown-first. The repo ships two small shell scripts with different purposes:
+The runtime behavior is Markdown-first. The repo ships two small shell scripts for manual maintenance:
 
-- `bin/update-check`: an optional, best-effort runtime check that compares your local `VERSION` file against the remote version on GitHub. It runs only on hosts that can execute companion scripts, caches results, and times out after 5 seconds. No telemetry, no data collection.
+- `bin/update-check`: an optional manual helper that compares your local `VERSION` file against the remote version on GitHub. It caches results and times out after 5 seconds. No telemetry, no data collection.
 - `bin/validate-release`: a maintainer-facing consistency check used before publishing. It validates version sync and packaged assets, but it is not invoked during normal skill usage.
 - All knowledge, templates, and routing logic remain human-readable Markdown with no executable code.
 - No environment variables or credentials required.
 - No privilege escalation.
-- If bash is not available, or the host stores the skill in a different location, the runtime update check is skipped automatically.
+- The skill itself does not auto-run these scripts during normal usage.
 
 ## Featured In
 

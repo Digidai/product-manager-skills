@@ -50,10 +50,10 @@ pass "package.json files covers required shipped assets"
 grep -q -- '- Growth & PLG' .github/ISSUE_TEMPLATE/workflow-gap.md || fail "Workflow gap issue template is missing Growth & PLG"
 pass "Issue template includes all current domains"
 
-grep -q 'runtime update check' README.md || fail "README.md should describe the optional runtime update check"
-grep -q 'maintainer-only release validator' README.md || fail "README.md should distinguish the maintainer-only release validator"
+grep -q 'manual helper' README.md || fail "README.md should describe update-check as a manual helper"
+grep -q 'maintainer-facing consistency check' README.md || fail "README.md should distinguish the maintainer-only release validator"
 grep -q 'bin/validate-release' README.md || fail "README.md structure/trust sections should mention bin/validate-release"
-grep -q '可选的运行时更新检查' README.zh-CN.md || fail "README.zh-CN should describe the optional runtime update check"
+grep -q '可选的手动更新辅助脚本' README.zh-CN.md || fail "README.zh-CN should describe update-check as a manual helper"
 grep -q '维护者发布前使用的一致性校验脚本' README.zh-CN.md || fail "README.zh-CN should distinguish the maintainer-only release validator"
 pass "README trust sections are aligned"
 
@@ -61,9 +61,11 @@ grep -q 'GitHub-based skill loaders' README.md || fail "README.md install docs s
 grep -q '基于 GitHub 的 skill loader' README.zh-CN.md || fail "README.zh-CN install docs should mention GitHub-based skill loaders"
 pass "Install docs are aligned across languages"
 
-grep -q 'CODEX_HOME' SKILL.md || fail "SKILL.md preamble is missing CODEX_HOME fallback"
-grep -q '\.agents/skills/product-manager-skills/bin/update-check' SKILL.md || fail "SKILL.md preamble is missing .agents fallback"
-pass "SKILL.md preamble includes broader host fallbacks"
+grep -q 'Do not execute local helper scripts automatically' SKILL.md || fail "SKILL.md should forbid automatic helper-script execution"
+if grep -q 'Run this command silently at the start of every session' SKILL.md; then
+  fail "SKILL.md should not contain the old silent execution preamble"
+fi
+pass "SKILL.md no longer auto-executes helper scripts"
 
 grep -q 'seven knowledge domains' package.json || fail "package.json description should mention seven knowledge domains"
 grep -q 'product-led-growth' package.json || fail "package.json keywords should include product-led-growth"

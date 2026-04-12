@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 Format follows [Keep a Changelog](https://keepachangelog.com/).
 
-## [0.5.3] - 2026-04-12
+## [0.5.4] - 2026-04-12
 
 ### Added
 - `bin/validate-release`: lightweight release consistency checker for versions, packaged assets, and doc drift
@@ -11,9 +11,9 @@ Format follows [Keep a Changelog](https://keepachangelog.com/).
 - Growth & PLG activation recovery example: `examples/growth-plg-activation-recovery.md`
 
 ### Changed
-- `SKILL.md` update-check preamble now tries more host-specific install locations before skipping
+- `SKILL.md` no longer instructs the agent to auto-run local helper scripts at session start
 - `SKILL.md` now allows a compact close for tiny one-shot requests
-- `README.md` and `README.zh-CN.md` now distinguish the optional runtime update check from the maintainer-only release validator and link the newer worked examples
+- `README.md` and `README.zh-CN.md` now describe `bin/update-check` as a manual helper instead of a runtime action, and still distinguish it from the maintainer-only release validator
 - `package.json` now ships `ETHOS.md`, `CHANGELOG.md`, and `CONTRIBUTING.md`, and exposes `npm run check:release`
 - `SKILL.md.tmpl`, `TODOS.md`, and the workflow-gap issue template were refreshed to match the current 7-domain state
 

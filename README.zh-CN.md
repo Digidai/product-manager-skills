@@ -91,14 +91,14 @@ npx skills add Digidai/product-manager-skills
 
 ## 信任与安全
 
-运行时能力仍然以纯 Markdown 为主。仓库里有两个很小的 shell 脚本，各自用途不同：
+运行时能力仍然以纯 Markdown 为主。仓库里有两个很小的 shell 脚本，供手动维护使用：
 
-- `bin/update-check`：可选的运行时更新检查。它会把本地 `VERSION` 和 GitHub 上的远端版本做比对，只在支持脚本执行的宿主里尝试运行，带超时和缓存，不上传业务数据。
+- `bin/update-check`：可选的手动更新辅助脚本。它会把本地 `VERSION` 和 GitHub 上的远端版本做比对，带超时和缓存，不上传业务数据。
 - `bin/validate-release`：维护者发布前使用的一致性校验脚本，用来检查版本号、打包内容和文档同步情况。正常使用技能时不会运行它。
 - knowledge、templates、路由逻辑仍然都是可审查的 Markdown
 - 不需要密钥
 - 没有提权
-- 如果宿主环境不支持 bash，或者技能安装路径不匹配，运行时更新检查会自动跳过
+- 技能本身不会在正常使用过程中自动执行这些脚本
 
 ## 相关文件
 

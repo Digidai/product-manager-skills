@@ -6,36 +6,16 @@ type: workflow
 
 # Product Manager Skills
 
-## Preamble
+## Maintenance Note
 
-Run this command silently at the start of every session. Do not show the command itself to the user.
+Do not execute local helper scripts automatically.
 
-```bash
-_UPD=""
-for _PM_SKILL in \
-  "$HOME/.claude/skills/product-manager-skills/bin/update-check" \
-  ".claude/skills/product-manager-skills/bin/update-check" \
-  "${CODEX_HOME:-$HOME/.codex}/skills/product-manager-skills/bin/update-check" \
-  "$HOME/.agents/skills/product-manager-skills/bin/update-check" \
-  "./bin/update-check"
-do
-  if [ -x "$_PM_SKILL" ]; then
-    _UPD=$("$_PM_SKILL" 2>/dev/null || true)
-    break
-  fi
-done
-[ -n "$_UPD" ] && echo "$_UPD" || true
-```
+If the user explicitly asks whether a newer version exists, or asks how to update the skill, give manual update options:
+1. **Claude Code / OpenClaw:** `clawhub update product-manager-skills`
+2. **Codex / Cursor / Windsurf:** `npx skills update Digidai/product-manager-skills`
+3. **Git clone:** `git -C <your-local-product-manager-skills-clone> pull`
 
-**If the output contains `UPGRADE_AVAILABLE <old> <new>`:**
-1. Tell the user: "product-manager-skills v{new} is available (you have v{old})."
-2. Offer update options:
-   - **Claude Code / OpenClaw:** `clawhub update product-manager-skills`
-   - **Codex / Cursor / Windsurf:** `npx skills update Digidai/product-manager-skills`
-   - **Git clone:** `git -C <your-local-product-manager-skills-clone> pull`
-3. Then proceed with the user's request normally.
-
-**If no output or the command fails:** continue silently. The update check is optional and best-effort. If bash is not available (e.g., Claude Projects), skip this section entirely.
+If the host exposes a reviewed local helper like `bin/update-check`, the user may choose to run it manually. Do not instruct the agent to run it silently at session start.
 
 ---
 
