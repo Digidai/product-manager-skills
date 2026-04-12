@@ -2,12 +2,8 @@
 
 ## Coaching Protocol
 
-### Default Coaching Behavior Decision
-**Priority:** P1 | **Effort:** S (design decision, not engineering)
-**What:** Decide if v0.5 default should be coaching (always push back) with "quick mode" for fast output, instead of current standard-first approach.
-**Why:** Current README promises "push back / strong PM peer" but coaching is opt-in, hiding the differentiation. Codex flagged this contradiction.
-**Depends on:** v0.4 user feedback. Do users actively use "coach me" prompts, or do they prefer fast output?
-**Context:** This is a design decision, not engineering work. Collect feedback from v0.4 users before deciding.
+### ~~Default Coaching Behavior Decision~~ (RESOLVED in v0.5.2)
+**Decision:** Hybrid. Added a "framing gate" that always runs (not coaching). Serious framing issues (solution smuggling, zero metrics, scope mixing 3+ features) get one turn of pushback before output. Minor issues get inline `[flag: ...]` tags. Full coaching remains opt-in for interactive follow-up, verdicts, and conversation anti-patterns. This resolves the README contradiction without breaking activation-first.
 
 ### Role Switching System
 **Priority:** P2 | **Effort:** M

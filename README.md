@@ -123,6 +123,7 @@ Full example: [examples/director-coaching.md](examples/director-coaching.md)
 | **Strategy & Positioning** | Position products, prioritize work, size markets, build roadmaps | Geoffrey Moore, PESTEL, TAM/SAM/SOM, RICE, ICE, Kano |
 | **Artifacts & Delivery** | Write and critique PRDs, user stories, epics, PRFAQs, recommendation docs | Cohn + Gherkin, Story Mapping, Epic Breakdown, PRFAQ |
 | **Finance & Metrics** | Calculate 32 SaaS metrics and diagnose business health | MRR, ARR, NRR, CAC, LTV, Rule of 40, Magic Number |
+| **Growth & PLG** | Design PLG strategy, optimize activation, model viral loops, diagnose conversion | PLG Readiness, Activation Framework, Viral Loop Design, Freemium Conversion |
 | **Career & Leadership** | Coach PM to Director to VP transitions | Altitude-Horizon, Three Ps, 30-60-90 onboarding |
 | **AI Product Craft** | Pressure-test AI-native product decisions | AI-Shaped Readiness, Context Engineering, Agent Orchestration |
 

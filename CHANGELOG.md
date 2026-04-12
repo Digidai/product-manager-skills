@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 Format follows [Keep a Changelog](https://keepachangelog.com/).
 
+## [0.5.2] - 2026-04-12
+
+### Added
+- Growth & PLG knowledge domain (knowledge/growth-plg.md): PLG readiness, activation framework, viral loop design, freemium conversion, growth experimentation
+- 6 new routing intents for Growth & PLG in SKILL.md
+- Framing gate (always-on): challenges solution smuggling, zero metrics, scope mixing before producing output
+- Growth & PLG starter prompts in STARTER-PROMPTS.md
+- Release announcement (docs/release-v0.5.md)
+
+### Changed
+- SKILL.md: 7 knowledge domains, 40+ frameworks
+- P1 coaching default decision resolved (hybrid: framing gate always on, full coaching opt-in)
+- README and README.zh-CN updated with Growth & PLG domain
+- TODOS.md: P1 marked as resolved
+
 ## [0.5.1] - 2026-04-12
 
 ### Added

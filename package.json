@@ -1,6 +1,6 @@
 {
   "name": "product-manager-skills",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "PM skill for Claude Code, Codex, Cursor, and Windsurf: diagnose SaaS metrics, critique PRDs, plan roadmaps, run discovery, coach PM career transitions, and run end-to-end PM sprints.",
   "keywords": [
     "product-manager-skills",

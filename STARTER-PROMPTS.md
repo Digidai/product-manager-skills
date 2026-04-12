@@ -104,6 +104,20 @@ Should we build this retention feature? Assume dev cost is $60k and estimate ROI
 Compare these two acquisition channels on payback, LTV:CAC, and strategic fit.
 ```
 
+## Growth And PLG
+
+```text
+We're considering adding a free tier to our B2B analytics tool. Assess our PLG readiness and recommend a freemium model.
+```
+
+```text
+Our activation rate is 12% on a 14-day free trial. Diagnose where users are dropping off and recommend fixes.
+```
+
+```text
+Design a viral loop for our collaborative project management tool. Be realistic about K-factor expectations.
+```
+
 ## Career And Leadership
 
 ```text

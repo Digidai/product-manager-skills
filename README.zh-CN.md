@@ -49,9 +49,9 @@ npx skills add Digidai/product-manager-skills
 
 ## 这个项目包含什么
 
-- 6 个知识域：发现研究、战略定位、交付执行、财务指标、职业发展、AI 产品
+- 7 个知识域：发现研究、战略定位、交付执行、财务指标、增长与 PLG、职业发展、AI 产品
 - 12 个模板：PRD、User Story、Problem Statement、Roadmap、Competitive Analysis 等
-- 30+ 个框架：JTBD、Geoffrey Moore、PRFAQ、OST、RICE、Kano 等
+- 40+ 个框架：JTBD、Geoffrey Moore、PRFAQ、OST、RICE、Kano、PLG Readiness、Viral Loop 等
 - 32 个 SaaS 指标：带公式、阶段基准值、红旗等级
 - 一套统一质量门槛：要求标注假设、量化结果、说明取舍、识别反模式
 
