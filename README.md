@@ -246,3 +246,7 @@ The runtime behavior is Markdown-first. The repo ships two small shell scripts f
 [CC BY-NC-SA 4.0](LICENSE)
 
 Built by [Gene Dai](https://genedai.me/). Distilled from real product work, not textbook summaries.
+
+## Download History
+
+[![Download History](https://skill-history.com/chart/digidai/product-manager-skills.svg)](https://skill-history.com/digidai/product-manager-skills)
