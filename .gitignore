@@ -12,3 +12,6 @@
 .env
 .envrc
 skill.zip
+
+# Claude Code 本地目录（worktree 与本地设置），不入库
+.claude/
